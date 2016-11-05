@@ -11,7 +11,8 @@
     "default_title": "LWHS app"
   },
   "permissions": [
-    "activeTab",
+    "*://*.myschoolapp.com/*",
+    "cookies",
     "https://ajax.googleapis.com/"
   ]
 }
