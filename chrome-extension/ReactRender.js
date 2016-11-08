@@ -5,12 +5,18 @@ var ReactElements = require('./ReactElements');
 var Window = React.createClass({
   propTypes: {
     course: React.PropTypes.string,
+    
   },
   
   render: function () {
     return (<div>
               <h1>{this.propTypes.course}</h1>
-            
+              <div>
+                <h2 style={part}>Assignments</h2>
+              </div>
+              <div style={part}>
+                <h2>Topics</h2>
+              </div>
             </div>);
               
   }
