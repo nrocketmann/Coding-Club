@@ -14,6 +14,7 @@ var Window = React.createClass({
               <div>
                 <h2 style={part}>Assignments</h2>
               </div>
+            <br/>
               <div style={part}>
                 <h2>Topics</h2>
               </div>
