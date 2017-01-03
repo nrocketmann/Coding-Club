@@ -49,6 +49,6 @@ class App extends Component {
         </Carousel>
       </div>
     )
-  }
+  }  
 }
 export default App;
