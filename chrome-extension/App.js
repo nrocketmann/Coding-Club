@@ -10,7 +10,7 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-import Carousel from '../node_modules/nuka-carousel/index';
+import Carousel from './nuka-carousel/index';
 
 class App extends Component {
   constructor(){
