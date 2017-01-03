@@ -1,0 +1,96 @@
+/*Raphael Gonzalez*/
+.App {
+  text-align: center;
+  background-color: #555;
+  background-image: url(./logo.svg);
+  background-position: center;
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: none;
+  max-height: none;
+  border-radius: 5px;
+}
+h1, h2, h3, h4, h5, h6 {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: inherit;
+  text-align: center;
+}
+
+li {
+  text-align: left;
+}
+
+.App-header {
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 21px;
+  margin-top: -7%;
+}
+
+.App-intro {
+  font-size: large;
+}
+.App-asmt {
+  min-height: 279px;
+  min-width: 49%;
+  max-height: 60%;
+  max-width: 49%;
+  margin-top: -3.5%;
+  background: rgba(255, 255, 255, 0.7);
+  position: static;
+  font-family: sans-serif;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.App-asmt h4 {
+  border-top-right-radius: 5px !important;
+}
+.App-asmt .App-window {
+  border-bottom-right-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  background: rgba(204, 204, 204, 0.1);
+  min-height: 60% !important;
+  float: none;
+}
+.App-tpc {
+  min-height: 279px;
+  width: 49.5%;
+  background: rgba(255,255,255,0.7);
+  margin-top: -300px;
+  margin-left: 50.5%;
+  font-family: sans-serif;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.App-tpc .App-window{
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: rgba(204, 204, 204, 0.1);
+  max-height: 240px !important;
+  float: none;
+}
+.App-bltn {
+  width: 100%;
+  max-height: 90.6px;
+  min-height: 90.6px;
+  margin-top: -11px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.7);
+}
+.App-bltn .App-window {
+  max-height: 50px;
+  overflow: auto;
+}
+.App-window {
+ min-height: 100%;
+ min-width: 100%;
+ max-width: inherit;
+ max-height: 240px;
+ background: rgba(204, 204, 204, 0.1);
+ border-radius: inherit;
+ overflow: auto;
+}
