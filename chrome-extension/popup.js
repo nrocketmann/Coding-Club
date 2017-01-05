@@ -69,4 +69,5 @@ window.addEventListener('load', function() {
 //checks if the user is logged in
 //function isLoggedIn (token) {
 //  getAssignments(API_FILTER_DUE, new Date(), new Date(), getToken());
-  
+
+export default {getToken, formatDate, getAssignments};
