@@ -24,9 +24,9 @@ li {
 }
 
 .App-header {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.9);
   font-size: 21px;
-  margin-top: -7%;
+  margin-top: 0px;
 }
 
 .App-intro {
@@ -58,7 +58,7 @@ li {
   min-height: 279px;
   width: 49.5%;
   background: rgba(255,255,255,0.7);
-  margin-top: -300px;
+  margin-top: -301px;
   margin-left: 50.5%;
   font-family: sans-serif;
   border-bottom-left-radius: 5px;

@@ -1,0 +1,11 @@
+{
+  "name": "chrome-extension",
+  "version": "1.0.0",
+  "description": "Hi! This is the place where we will write the chrome extension. I set up the file structure. Popup.html and popup.js is where we will do most of the work here. Just write stuff when you can. We will divide jobs today. Check out this link to understand what to do: https://developer.chrome.com/extensions/devguide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
