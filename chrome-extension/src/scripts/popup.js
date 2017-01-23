@@ -2,6 +2,42 @@
 // <this>.myschoolapp.com
 var basename = 'lwhs';
 
+/*
+the assignment data is just an array
+each object in it has the properties:
+className
+id
+indexId (used for the updateAssignmentStatus)
+type (eg "Homework")
+title ("Read pp. 44-45")
+description ("Read and annotate pages 44-45 in SOME BOOK I DON'T CARE. Be prepared for an in-class discussion.")
+status (a number, this code also has constants ASSIGNMENT_STATUS_ (TODO, IN_PROGRESS, COMPLETED))
+
+there is also getAssignmentUrl
+that takes one of the assignments
+and returns the url to view it on the website
+i haven't figured out how to get information on links and downloads yet
+*/
+
+function parseAssignmentData(data) {
+  return data.map(function(item) {
+    return {
+      className: item.groupname,
+      id: item.assignment_id,
+      indexId: item.assignment_index_id,
+      type: item.assignment_type,
+      title: item.short_description,
+      description: item.long_description,
+      status: item.assignment_status,
+
+    };
+  });
+}
+
+function getAssignmentUrl(a) {
+  return 'https://' + basename + '.myschoolapp.com/app/student#assignmentdetail/' + a.id + '/' + a.indexId + '/0/studentmyday--assignment-center';
+}
+
 // retrieves the token cookie and calls a callback function with the token
 function getToken(cb) {
   chrome.cookies.get({
@@ -27,7 +63,7 @@ function getAssignments(filter, startDate, endDate, token, cb) {
     xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
   xhr.onload = function() {
-    cb(null, JSON.parse(xhr.responseText));
+    cb(null, parseAssignmentData(JSON.parse(xhr.responseText)));
   };
   xhr.onerror = function(err) {
     cb(err, null);
@@ -35,9 +71,9 @@ function getAssignments(filter, startDate, endDate, token, cb) {
   xhr.send();
 }
 
-const API_STATUS_TODO = -1,
-  API_STATUS_IN_PROGRESS = 0,
-  API_STATUS_COMPLETED = 1;
+const ASSIGNMENT_STATUS_TODO = -1,
+  ASSIGNMENT_STATUS_IN_PROGRESS = 0,
+  ASSIGNMENT_STATUS_COMPLETED = 1;
 // https://lwhs.myschoolapp.com/api/assignment2/assignmentstatusupdate/?format=json&assignmentIndexId=9523553&assignmentStatus=-1
 // updates the status of an assignment
 // id = the property "assignment_index_id" on an object in the array returned by getAssignments
@@ -70,4 +106,42 @@ window.addEventListener('load', function() {
 //function isLoggedIn (token) {
 //  getAssignments(API_FILTER_DUE, new Date(), new Date(), getToken());
 
-export default {getToken, formatDate, getAssignments};
+export default {getToken, formatDate, getAssignments, getAssignmentUrl, API_FILTER_ASSIGNED, API_FILTER_ACTIVE, API_FILTER_DUE, ASSIGNMENT_STATUS_TODO, ASSIGNMENT_STATUS_IN_PROGRESS, ASSIGNMENT_STATUS_COMPLETED};
+
+// this is just a bunch of raw data from the api
+// https://lwhs.myschoolapp.com/api/datadirect/AssignmentStudentDetail?format=json&studentId=4139755&AssignmentIndexId=9959651
+/*
+[
+  {
+    "title": "Finish Why Sex - the human psychology segment and questions. 40 minutes - 56 minutes",
+    "description": "",
+    "adateTicks": 636198624000000000,
+    "adate": "1/13/2017 12:00 AM",
+    "ddateTicks": 636204671400000000,
+    "ddate": "1/19/2017 11:59 PM",
+    "sectionName": "Biology - 5 (F)",
+    "assignmentType": "Homework",
+    "dbid": null,
+    "dbDetail": null,
+    "readyInd": null,
+    "lastSubmitDate": null,
+    "dbFileDescription": null,
+    "dbFileName": null,
+    "dbFileId": null,
+    "fileTypeId": null,
+    "userFolderId": null,
+    "fileSize": null,
+    "externalId": null,
+    "pointsEarned": null,
+    "valueId": null,
+    "Letter": null,
+    "maxPoints": 10,
+    "assignmentStatus": 4,
+    "googleExternalId": null,
+    "googleExternalUrl": null,
+    "googleDocInd": false,
+    "tolken": "",
+    "uuid": "XwtCURZXV30%3d"
+  }
+]
+*/

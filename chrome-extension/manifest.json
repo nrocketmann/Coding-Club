@@ -1,13 +1,18 @@
 {
   "manifest_version": 2,
-
   "name": "Lick stuff",
   "description": "This extension helps consolidate all of your lick information in an easier to use form",
   "version": "1.0",
-
+    "background": [
+    {
+        "css": ["static/css/main.994649a3.css", "static/css/main.994649a3.css.map"],
+        "js": ["static/js/main.de28b7ad.js", "static/js/main.de28b7ad.js.map"],
+        "persistant": false
+    }
+],
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_title": "LWHS app"
   },
   "permissions": [
@@ -15,4 +20,5 @@
     "cookies",
     "https://ajax.googleapis.com/"
   ]
+
 }
