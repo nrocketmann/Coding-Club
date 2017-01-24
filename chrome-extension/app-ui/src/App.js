@@ -37,13 +37,13 @@ class App extends Component {
   render() {
     let vehicles = this.state.vehicles
     let items = this.state.items
-    let discription = this.state.discription
+    //let discription = this.state.discription
     //let species = this.state.species
-
+//discription.map(disc => <li>{disc.short_discription}</li>)
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title='Science' hmwk={discription.map(disc => <li>{disc.short_discription}</li>)} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
+          <Ui title='Science' hmwk={'life'} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>

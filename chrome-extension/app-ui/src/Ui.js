@@ -10,9 +10,9 @@ class Ui extends Component {
       <div>
         <h3 className='App-header'>{this.props.title}</h3>
         <div>
-          <Homewk ast={this.props.hmwk}/>
+          <Homewk asmt={this.props.hmwk}/>
           <Topic tpic={this.props.tpc}/>
-          <Buliton/>
+          <Buliton btn={this.props.bltn}/>
         </div>
       </div>
     );

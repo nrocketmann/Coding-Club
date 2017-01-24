@@ -7,7 +7,7 @@ class Buliton extends Component {
       <div className='App-bltn'>
         <h4>buletin</h4>
         <div className='App-window'>
-          stuff
+          {this.props.btn}
         </div>
       </div>
     )

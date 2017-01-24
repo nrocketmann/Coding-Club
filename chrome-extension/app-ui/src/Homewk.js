@@ -6,8 +6,8 @@ class Homewk extends Component {
     return (
       <div className='App-asmt'>
         <h4>Assignments</h4>
-        <div className='App-window' hw={this.props.ast}>
-          {this.props.hw}
+        <div className='App-window'>
+          <ul>{this.props.asmt}</ul>
         </div>
       </div>
     )
