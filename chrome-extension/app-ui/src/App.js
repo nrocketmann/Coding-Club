@@ -1,3 +1,4 @@
+//Raphael Gonzalez
 import React, { Component } from 'react';
 import Carousel from '../node_modules/nuka-carousel/index';
 import './App.css';
@@ -8,7 +9,8 @@ import Ui3 from './Ui';
 import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
-import Ui7 from './Ui'
+import Ui7 from './Ui';
+import '../../src/scripts/popup.js'
 
 class App extends Component {
   constructor(){
