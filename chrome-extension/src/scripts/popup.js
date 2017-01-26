@@ -106,7 +106,18 @@ window.addEventListener('load', function() {
 //function isLoggedIn (token) {
 //  getAssignments(API_FILTER_DUE, new Date(), new Date(), getToken());
 
-export default {getToken, formatDate, getAssignments, getAssignmentUrl, API_FILTER_ASSIGNED, API_FILTER_ACTIVE, API_FILTER_DUE, ASSIGNMENT_STATUS_TODO, ASSIGNMENT_STATUS_IN_PROGRESS, ASSIGNMENT_STATUS_COMPLETED};
+module.exports = {
+  getToken: getToken,
+  formatDate: formatDate,
+  getAssignments: getAssignments,
+  getAssignmentUrl: getAssignmentUrl,
+  API_FILTER_ASSIGNED: API_FILTER_ASSIGNED,
+  API_FILTER_ACTIVE: API_FILTER_ACTIVE,
+  API_FILTER_DUE: API_FILTER_DUE,
+  ASSIGNMENT_STATUS_TODO: ASSIGNMENT_STATUS_TODO,
+  ASSIGNMENT_STATUS_IN_PROGRESS: ASSIGNMENT_STATUS_IN_PROGRESS,
+  ASSIGNMENT_STATUS_COMPLETED: ASSIGNMENT_STATUS_COMPLETED
+};
 
 // this is just a bunch of raw data from the api
 // https://lwhs.myschoolapp.com/api/datadirect/AssignmentStudentDetail?format=json&studentId=4139755&AssignmentIndexId=9959651
