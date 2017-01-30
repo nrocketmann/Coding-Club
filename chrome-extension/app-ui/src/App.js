@@ -10,7 +10,7 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-//import '../../src/scripts/popup.js'
+import '../../src/scripts/popup.js'
 
 class App extends Component {
   constructor(){

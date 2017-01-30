@@ -29,7 +29,6 @@ function parseAssignmentData(data) {
       title: item.short_description,
       description: item.long_description,
       status: item.assignment_status,
-
     };
   });
 }
