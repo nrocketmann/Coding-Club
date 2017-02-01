@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title="sfdsfdfs" hmwk={<li>{console.log('hmwk logs!')}</li>} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
+          <Ui title="{className}" hmwk={<li>{console.log('hmwk logs!')}</li>} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
@@ -58,6 +58,9 @@ class App extends Component {
         </Carousel>
       </div>
     );
+  }
+  componentDidMount(){
+    console.log(popup.getAssignmentUrl); 
   }
 }
 
