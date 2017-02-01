@@ -16,6 +16,7 @@ class App extends Component {
   constructor(){
   super();
   this.state = {
+    discription: [],
     items: [],
     species: [],
     vehicles:[]
@@ -25,9 +26,9 @@ class App extends Component {
   fetch('http://swapi.co/api/planets/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: items}) => this.setState({items}))
-  //fetch(getAssignmentUrl())
-  //.then (responseText => responseText.json())
-  //.then ( ({results: discription}) => this.setState({discription}))
+  fetch('../../src/scripts/popup.js')
+  .then (responseText => responseText.json())
+  .then ( ({results: className}) => this.setState({className}))
   fetch('http://swapi.co/api/species/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: species}) => this.setState({species}))
@@ -38,6 +39,7 @@ class App extends Component {
   render() {
     let vehicles = this.state.vehicles
     let items = this.state.items
+    let className = this.state.className
 
     //let discription = this.state.discription
     //let species = this.state.species
@@ -45,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title='Science' hmwk={<li>{}</li>} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
+          <Ui title="sfdsfdfs" hmwk={<li>{console.log('hmwk logs!')}</li>} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
