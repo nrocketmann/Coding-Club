@@ -1,6 +1,7 @@
 //Raphael Gonzalez
 import React, { Component } from 'react';
-import './App.css'
+import './App.css';
+import '../../src/scripts/popup.js';
 
 class Buliton extends Component {
   render () {

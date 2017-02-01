@@ -10,14 +10,13 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-import '../../src/scripts/popup.js'
+import * as popup from '../../src/scripts/popup.js';
 
 class App extends Component {
   constructor(){
   super();
   this.state = {
     items: [],
-    discription: [],
     species: [],
     vehicles:[]
     }
@@ -26,9 +25,9 @@ class App extends Component {
   fetch('http://swapi.co/api/planets/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: items}) => this.setState({items}))
-  fetch('https://lwhs.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&persona=2&filter=2&dateStart=1.16.17&dateEnd=1.18.17&t=b406c1d7-2cb0-46ac-9efe-a683ca633df5')
-  .then (responseText => responseText.json())
-  .then ( ({results: discription}) => this.setState({discription}))
+  //fetch(getAssignmentUrl())
+  //.then (responseText => responseText.json())
+  //.then ( ({results: discription}) => this.setState({discription}))
   fetch('http://swapi.co/api/species/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: species}) => this.setState({species}))
@@ -39,13 +38,14 @@ class App extends Component {
   render() {
     let vehicles = this.state.vehicles
     let items = this.state.items
+
     //let discription = this.state.discription
     //let species = this.state.species
 //discription.map(disc => <li>{disc.short_discription}</li>)
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title='Science' hmwk={'life'} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
+          <Ui title='Science' hmwk={<li>{}</li>} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
