@@ -4,7 +4,7 @@ import './App.css';
 import Homewk from './Homewk';
 import Topic from './Topic';
 import Buliton from './Buliton';
-import '../../src/scripts/popup.js';
+//import '../../src/scripts/popup.js';
 
 class Ui extends Component {
   render () {

@@ -1,7 +1,7 @@
 //Raphael Gonzalez
 import React, { Component } from 'react';
 import './App.css';
-import '../../src/scripts/popup.js';
+//import '../../src/scripts/popup.js';
 
 class Homewk extends Component {
   render () {

@@ -11,9 +11,9 @@ import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
 import * as popup from '../../src/scripts/popup.js';
-
+import example from '../../example.json'
 class App extends Component {
-  constructor(){
+/*  constructor(){
   super();
   this.state = {
     discription: [],
@@ -35,11 +35,12 @@ class App extends Component {
   fetch('http://swapi.co/api/vehicles/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: vehicles}) => this.setState({vehicles}))
-  }
+}*/
+
   render() {
-    let vehicles = this.state.vehicles
+  /*  let vehicles = this.state.vehicles
     let items = this.state.items
-    let className = this.state.className
+    let className = this.state.className*/
 
     //let discription = this.state.discription
     //let species = this.state.species
@@ -47,7 +48,7 @@ class App extends Component {
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title="{className}" hmwk={<li>{console.log('hmwk logs!')}</li>} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
+          <Ui title="{className}" hmwk={<li>{}</li>} tpc={/*items.map(item =>*/ <li>{}</li>/*)*/} bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
@@ -60,7 +61,7 @@ class App extends Component {
     );
   }
   componentDidMount(){
-    console.log(popup.getAssignmentUrl); 
+    console.log(popup.API_FILTER_ACTIVE);
   }
 }
 
