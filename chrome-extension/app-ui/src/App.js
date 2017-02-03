@@ -10,8 +10,8 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-import * as popup from '../../src/scripts/popup.js';
-import example from '../../example.json'
+import * as popup from '../../src/scripts/popup.js'; 
+// import example from '../../example.json'
 class App extends Component {
 /*  constructor(){
   super();
@@ -36,7 +36,9 @@ class App extends Component {
   .then (responseText => responseText.json())
   .then ( ({results: vehicles}) => this.setState({vehicles}))
 }*/
+function (){
 
+}
   render() {
   /*  let vehicles = this.state.vehicles
     let items = this.state.items
@@ -61,7 +63,8 @@ class App extends Component {
     );
   }
   componentDidMount(){
-    console.log(popup.API_FILTER_ACTIVE);
+    console.log("Test")
+    console.log(popup.getAssignments("2", "2.2.17", "2.3.17", "9a32cb28-5b21-4138-91d1-99cfcad444bd", "null"));
   }
 }
 
