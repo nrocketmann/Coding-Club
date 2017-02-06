@@ -11,7 +11,6 @@
   min-height: 400px;
   max-width: none;
   max-height: none;
-  border-radius: 5px;
 }
 h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.7);
@@ -76,8 +75,6 @@ li {
   max-height: 90.6px;
   min-height: 90.6px;
   margin-top: -8px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   text-align: left;
   background: rgba(255, 255, 255, 0.7);
 }
