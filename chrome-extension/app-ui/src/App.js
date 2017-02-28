@@ -10,14 +10,14 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-//import '../../src/scripts/popup.js'
-
+import * as popup from '../../src/scripts/popup.js';
+// import example from '../../example.json'
 class App extends Component {
-  constructor(){
+/*  constructor(){
   super();
   this.state = {
-    items: [],
     discription: [],
+    items: [],
     species: [],
     vehicles:[]
     }
@@ -26,26 +26,40 @@ class App extends Component {
   fetch('http://swapi.co/api/planets/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: items}) => this.setState({items}))
-  fetch('https://lwhs.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&persona=2&filter=2&dateStart=1.16.17&dateEnd=1.18.17&t=b406c1d7-2cb0-46ac-9efe-a683ca633df5')
+  fetch('../../src/scripts/popup.js')
   .then (responseText => responseText.json())
-  .then ( ({results: discription}) => this.setState({discription}))
+  .then ( ({results: className}) => this.setState({className}))
   fetch('http://swapi.co/api/species/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: species}) => this.setState({species}))
   fetch('http://swapi.co/api/vehicles/?format=json')
   .then (responseText => responseText.json())
   .then ( ({results: vehicles}) => this.setState({vehicles}))
+}*/
+constructor(){
+  super();
+  this.state = {
+    t:[]
   }
+}
+componentWillMount(){
+  fetch("https://lwhs.myschoolapp.com/api/authentication/login/?username=raphaelgonzalez19&password=1837rcg", {token: "token"})
+.then(responseText => responseText.json())
+.then( ({result: t}) => this.setState({t}))
+}
+
   render() {
-    let vehicles = this.state.vehicles
+  /*  let vehicles = this.state.vehicles
     let items = this.state.items
+    let className = this.state.className*/
+var t = this.state.t;
     //let discription = this.state.discription
     //let species = this.state.species
 //discription.map(disc => <li>{disc.short_discription}</li>)
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title='Science' hmwk={'life'} tpc={items.map(item => <li>{item.name}</li>)} bltn={vehicles.map(mobile => <li>{mobile.name}</li>)}/>
+          <Ui title="{className}" hmwk={t.map(tkn => <li>{this.tkn}</li>)} tpc={/*items.map(item =>*/ <li>{}</li>/*)*/} bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
@@ -56,6 +70,9 @@ class App extends Component {
         </Carousel>
       </div>
     );
+  }
+  componentDidMount(){
+    console.log(popup.getAssignments("2", "2.2.17", "2.3.17", "9a32cb28-5b21-4138-91d1-99cfcad444bd", "null"));
   }
 }
 
