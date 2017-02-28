@@ -16,7 +16,8 @@
   "permissions": [
     "*://*.myschoolapp.com/*",
     "cookies",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "*://*.myschoolapp.com/"
   ]
 
 }
