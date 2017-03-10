@@ -36,30 +36,41 @@ class App extends Component {
   .then (responseText => responseText.json())
   .then ( ({results: vehicles}) => this.setState({vehicles}))
 }*/
-constructor(){
-  super();
-  this.state = {
-    t:[]
-  }
-}
+
 componentWillMount(){
-  fetch("https://lwhs.myschoolapp.com/api/authentication/login/?username=raphaelgonzalez19&password=1837rcg", {token: "token"})
-.then(responseText => responseText.json())
-.then( ({result: t}) => this.setState({t}))
+  fetch('https://lwhs.myschoolapp.com/api/authentication/login/?username=raphaelgonzalez19&password=1837rcg')
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
 }
 
   render() {
   /*  let vehicles = this.state.vehicles
     let items = this.state.items
     let className = this.state.className*/
-var t = this.state.t;
+
     //let discription = this.state.discription
     //let species = this.state.species
 //discription.map(disc => <li>{disc.short_discription}</li>)
+/*items.map(item => <li>{}</li>)*/
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title="{className}" hmwk={t.map(tkn => <li>{this.tkn}</li>)} tpc={/*items.map(item =>*/ <li>{}</li>/*)*/} bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
+          <Ui title="{className}" hmwk='some stuff' tpc="{ <li></li>}" bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
