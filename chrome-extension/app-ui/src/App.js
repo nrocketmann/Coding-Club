@@ -13,60 +13,8 @@ import Ui7 from './Ui';
 import * as popup from '../../src/scripts/popup.js';
 // import example from '../../example.json'
 class App extends Component {
-/*  constructor(){
-  super();
-  this.state = {
-    discription: [],
-    items: [],
-    species: [],
-    vehicles:[]
-    }
-  }
-  componentWillMount(){
-  fetch('http://swapi.co/api/planets/?format=json')
-  .then (responseText => responseText.json())
-  .then ( ({results: items}) => this.setState({items}))
-  fetch('../../src/scripts/popup.js')
-  .then (responseText => responseText.json())
-  .then ( ({results: className}) => this.setState({className}))
-  fetch('http://swapi.co/api/species/?format=json')
-  .then (responseText => responseText.json())
-  .then ( ({results: species}) => this.setState({species}))
-  fetch('http://swapi.co/api/vehicles/?format=json')
-  .then (responseText => responseText.json())
-  .then ( ({results: vehicles}) => this.setState({vehicles}))
-}*/
-
-componentWillMount(){
-  fetch('https://lwhs.myschoolapp.com/api/authentication/login/?username=raphaelgonzalez19&password=1837rcg')
-  .then(
-    function(response) {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
-      }
-
-      // Examine the text in the response
-      response.json().then(function(data) {
-        console.log(data);
-      });
-    }
-  )
-  .catch(function(err) {
-    console.log('Fetch Error :-S', err);
-  });
-}
 
   render() {
-  /*  let vehicles = this.state.vehicles
-    let items = this.state.items
-    let className = this.state.className*/
-
-    //let discription = this.state.discription
-    //let species = this.state.species
-//discription.map(disc => <li>{disc.short_discription}</li>)
-/*items.map(item => <li>{}</li>)*/
     return (
       <div className="App">
         <Carousel speed={600}>
