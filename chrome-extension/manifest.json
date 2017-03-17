@@ -5,8 +5,8 @@
   "version": "1.0",
   "background": {
     "css": ["app-ui/build/static/css/main.08fe32c0.css", "static/css/main.08fe32c0.css.map"],
-    "js": ["app-ui/build/static/js/main.7ea871be.js", "static/js/main.7ea871be.js.map"],
-    "persistent": false
+    "js": ["app-ui/build/static/js/main.7ea871be.js", "static/js/main.7ea871be.js.map"]
+
   },
   "browser_action": {
     "default_icon": "icon.png",
