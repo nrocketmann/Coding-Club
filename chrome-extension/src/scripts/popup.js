@@ -91,16 +91,16 @@ function updateAssignmentStatus(id, status, cb) {
   xhr.send();
 }
 
-window.addEventListener('load', function() {
-  document.getElementById('view-token').addEventListener('click', function() {
-    document.getElementById('token').innerHTML = '<i>loading...</i>';
-    getToken(function(t) {
-      getAssignments(API_FILTER_ACTIVE, new Date(), new Date(), t, function(err, data) {
-        document.getElementById('token').innerHTML = '<pre>' + JSON.stringify(data) + '</pre>';
-      });
-    });
-  }, false);
-}, false);
+// window.addEventListener('load', function() {
+//   document.getElementById('view-token').addEventListener('click', function() {
+//     document.getElementById('token').innerHTML = '<i>loading...</i>';
+//     getToken(function(t) {
+//       getAssignments(API_FILTER_ACTIVE, new Date(), new Date(), t, function(err, data) {
+//         document.getElementById('token').innerHTML = '<pre>' + JSON.stringify(data) + '</pre>';
+//       });
+//     });
+//   }, false);
+// }, false);
 //checks if the user is logged in
 //function isLoggedIn (token) {
 //  getAssignments(API_FILTER_DUE, new Date(), new Date(), getToken());

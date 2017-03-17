@@ -1,7 +1,7 @@
 //Raphael Gonzalez
 import React, { Component } from 'react';
 import Carousel from '../node_modules/nuka-carousel/index';
-import './App.css';
+//import './App.css';
 import Ui from './Ui';
 import Ui1 from './Ui';
 import Ui2 from './Ui';
@@ -11,13 +11,20 @@ import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
 import * as popup from '../../src/scripts/popup.js';
+import Home from './Home';
 // import example from '../../example.json'
 class App extends Component {
+  // componentWillMount(){
+  //   popup.getAssignments(popup.API_FILTER_ASSIGNED, popup.formatDate(new Date), popup.formatDate(new Date), "12bb455c-f255-41d1-8b40-d0f2e473abd7", function(data) {
+  //     console.log(data);
+  //   });
+  // }
 
   render() {
     return (
       <div className="App">
         <Carousel speed={600}>
+          <Home />
           <Ui title="{className}" hmwk='some stuff' tpc="{ <li></li>}" bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
@@ -29,9 +36,6 @@ class App extends Component {
         </Carousel>
       </div>
     );
-  }
-  componentDidMount(){
-    console.log(popup.getAssignments("2", "2.2.17", "2.3.17", "9a32cb28-5b21-4138-91d1-99cfcad444bd", "null"));
   }
 }
 

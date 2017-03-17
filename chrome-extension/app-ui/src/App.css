@@ -91,3 +91,13 @@ li {
  border-radius: inherit;
  overflow: auto;
 }
+
+.App-home {
+  min-height: 400px;
+  width: 400px;
+  background: rgba(255, 255, 255, );
+  margin-top: -10px;
+  font-family: sans-serif;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
