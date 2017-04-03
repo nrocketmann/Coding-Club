@@ -1,3 +1,4 @@
+// Ben Grant
 // which "instance" of the app we are using
 // <this>.myschoolapp.com
 var basename = 'lwhs';
@@ -56,18 +57,23 @@ const API_FILTER_ASSIGNED = 0,
   API_FILTER_DUE = 1;
 // gets assignment information from API
 // callback gets error then assignments
-function getAssignments(filter, startDate, endDate, token, cb) {
-  var url = ('https://' + basename + '.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&persona=2&filter='
-    + filter + '&dateStart=' + formatDate(startDate) + '&dateEnd=' + formatDate(endDate) + '&t=' + token),
-    xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.onload = function() {
-    cb(null, parseAssignmentData(JSON.parse(xhr.responseText)));
-  };
-  xhr.onerror = function(err) {
-    cb(err, null);
-  };
-  xhr.send();
+function getAssignments(filter, startDate, endDate, cb) {
+  getToken(function(token) {
+    if (token === null) {
+      return cb(new Error('Unable to retrieve token from cookies'), null);
+    }
+    var url = ('https://' + basename + '.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&persona=2&filter='
+      + filter + '&dateStart=' + formatDate(startDate) + '&dateEnd=' + formatDate(endDate) + '&t=' + token),
+      xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onload = function() {
+      cb(null, parseAssignmentData(JSON.parse(xhr.responseText)));
+    };
+    xhr.onerror = function(err) {
+      cb(err, null);
+    };
+    xhr.send();
+  });
 }
 
 const ASSIGNMENT_STATUS_TODO = -1,
