@@ -1,4 +1,4 @@
-// which "instance" of the app we are using
+]// which "instance" of the app we are using
 // <this>.myschoolapp.com
 var basename = 'lwhs';
 
