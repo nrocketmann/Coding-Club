@@ -93,13 +93,14 @@ li {
 }
 
 .App-home {
-  height: 400px;
-  width: 400px;
-  background: rgba(255, 255, 255);
-  margin-top: -10px;
+  min-height: 400px;
+  min-width: 400px;
   font-family: sans-serif;
 }
 .App-home .App-window {
   min-height: 400px;
   min-width: 100%;
+}
+.App-home, ul {
+  margin-top: 10px;
 }

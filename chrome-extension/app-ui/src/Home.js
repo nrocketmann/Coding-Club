@@ -6,8 +6,8 @@ class Home extends Component{
     return(
       <div>
         <h1 className='App-header'>All Homework</h1>
-        <div ClassName='App-home'>
-          <div ClassName='App-window'>
+        <div className='App-home'>
+          <div className='App-window'>
             <ul>{this.props.asmt}</ul>
           </div>
         </div>
