@@ -8,7 +8,7 @@ class Topics extends Component {
     return (
       <div className='App-tpc'>
         <h4>Topics</h4>
-        <div className='App-window' >
+        <div className='App-window'>
           <ul>{this.props.tpic}</ul>
         </div>
       </div>
