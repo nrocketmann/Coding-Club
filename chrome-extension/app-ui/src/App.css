@@ -43,7 +43,7 @@ li {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.App-asmt h4 {
+.App-asmt, h4 {
   border-top-right-radius: 5px !important;
 }
 .App-asmt .App-window {
@@ -98,7 +98,8 @@ li {
   font-family: sans-serif;
 }
 .App-home .App-window {
-  min-height: 400px;
+  margin-top: -7px;
+  min-height: 388px;
   min-width: 100%;
 }
 .App-home, ul {
