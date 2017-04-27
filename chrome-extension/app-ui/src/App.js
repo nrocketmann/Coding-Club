@@ -21,7 +21,7 @@ class App extends Component {
     raw = popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, function(data) {
       console.log(data);
     });
-    parsed = AsParsed(raw, )
+    parsed = AsParsed(raw)
   }
 
   render() {
