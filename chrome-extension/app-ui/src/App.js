@@ -15,17 +15,17 @@ import Home from './Home';
 import './App.css'
 // import example from '../../example.json'
 class App extends Component {
-  // componentWillMount(){
-  //   popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, "12bb455c-f255-41d1-8b40-d0f2e473abd7", function(data) {
-  //     console.log(data);
-  //   });
-  // }
+  componentWillMount(){
+     popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, "12bb455c-f255-41d1-8b40-d0f2e473abd7", function(data) {
+      console.log(data);
+    });
+  }
 
   render() {
     return (
       <div className="App">
         <Carousel speed={600}>
-          <Ui title="{className}" hmwk='some stuff' tpc={<li>{}</li>} bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
+          <Ui title="{className}" hmwk={<li>{}</li>} tpc={<li>{}</li>} bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Home asmt={<li>{}</li>} />
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
