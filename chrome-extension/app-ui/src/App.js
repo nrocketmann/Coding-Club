@@ -18,9 +18,15 @@ import './App.css'
 // import example from '../../example.json'
 class App extends Component {
   componentWillMount(){
+<<<<<<< HEAD
      popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, token, function(data) {
        console.log(data);
+=======
+    raw = popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, function(data) {
+      console.log(data);
+>>>>>>> 2897d65f1f026598e567680bead3258d266c7008
     });
+    parsed = AsParsed(raw)
   }
 
   render() {
