@@ -25,8 +25,8 @@ class App extends Component {
     return (
       <div className="App">
         <Carousel speed={600}>
+          <Ui title="{className}" hmwk='some stuff' tpc={<li>{}</li>} bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Home asmt={<li>{}</li>} />
-          <Ui title="{className}" hmwk='some stuff' tpc="{ <li></li>}" bltn={/*vehicles.map(mobile =>*/ <li>{}</li>/*)*/}/>
           <Ui1 title='Technology' hmwk='this is a different set of isnfo'/>
           <Ui2 title='Engineering'/>
           <Ui3 title='Math'/>
