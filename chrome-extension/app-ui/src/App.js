@@ -12,15 +12,16 @@ import Ui6 from './Ui';
 import Ui7 from './Ui';
 import getAssignments as AsRaw from '../../src/scripts/popup.js';
 import parseAssignmentData as AsParsed from '../../src/scripts/popup.js';
+import * as popup fom '../../src/scripts/popup.js';
 import Home from './Home';
 import './App.css'
 // import example from '../../example.json'
 class App extends Component {
-  // componentWillMount(){
-  //   popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, "12bb455c-f255-41d1-8b40-d0f2e473abd7", function(data) {
-  //     console.log(data);
-  //   });
-  // }
+  componentWillMount(){
+    popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, function(data) {
+      console.log(data);
+    });
+  }
 
   render() {
     return (
