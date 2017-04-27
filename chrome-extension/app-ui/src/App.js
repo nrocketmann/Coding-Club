@@ -10,7 +10,8 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-import * as popup from '../../src/scripts/popup.js';
+import getAssignments as AsRaw from '../../src/scripts/popup.js';
+import parseAssignmentData as AsParsed from '../../src/scripts/popup.js';
 import Home from './Home';
 import './App.css'
 // import example from '../../example.json'
