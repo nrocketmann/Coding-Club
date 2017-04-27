@@ -10,8 +10,6 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-import getAssignments as AsRaw from '../../src/scripts/popup.js';
-import parseAssignmentData as AsParsed from '../../src/scripts/popup.js';
 import * as popup fom '../../src/scripts/popup.js';
 import Home from './Home';
 import './App.css'
@@ -26,7 +24,7 @@ class App extends Component {
       console.log(data);
 >>>>>>> 2897d65f1f026598e567680bead3258d266c7008
     });
-    parsed = AsParsed(raw)
+    parsed = popup.parseAssignmentData(raw)
   }
 
   render() {
