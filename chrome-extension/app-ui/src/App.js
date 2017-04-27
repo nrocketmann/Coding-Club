@@ -10,21 +10,18 @@ import Ui4 from './Ui';
 import Ui5 from './Ui';
 import Ui6 from './Ui';
 import Ui7 from './Ui';
-import getAssignments as AsRaw from '../../src/scripts/popup.js';
-import parseAssignmentData as AsParsed from '../../src/scripts/popup.js';
-import * as popup fom '../../src/scripts/popup.js';
+import getAssignments AsRaw from '../../src/scripts/popup.js';
+import parseAssignmentData AsParsed from '../../src/scripts/popup.js';
+import * popup fom '../../src/scripts/popup.js';
 import Home from './Home';
 import './App.css'
 // import example from '../../example.json'
 class App extends Component {
   componentWillMount(){
-<<<<<<< HEAD
      popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, token, function(data) {
        console.log(data);
-=======
     raw = popup.getAssignments(popup.API_FILTER_ASSIGNED, new Date, new Date, function(data) {
       console.log(data);
->>>>>>> 2897d65f1f026598e567680bead3258d266c7008
     });
     parsed = AsParsed(raw)
   }
